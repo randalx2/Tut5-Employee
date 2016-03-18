@@ -14,6 +14,8 @@ int Employee::numberOfEmployees = 0;   //DON'T SPECIFY THE STATIC KEYWORD HERE
                                       //ONLY USE STATIC IN THE DECLARATION. Static variables are only
                                      //initialized once.
                                    //Can access static variable of class scope outside class without creating any object
+
+/*
 Employee::Employee(){
 	
 	nameOfEmployee = "Any Employee";
@@ -40,7 +42,7 @@ Employee::Employee(string iname, int inumber){
 
 Employee::~Employee(){
 	numberOfEmployees--; //Employee lost when an object is destroyed
-}
+} */
 
 //No Need to develop bodies for pure virtual functions in abstract base class
 //Instead define their overriding functions in the sub classes

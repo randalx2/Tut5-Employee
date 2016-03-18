@@ -6,15 +6,18 @@
 using namespace std;
 
 class Employee {
-protected: static int numberOfEmployees;  //Only one copy available to keep track of number of employees
+protected: 
 
 		   string nameOfEmployee;  //Employee name -- to be set by constructor
 		   float salaryOfEmployee;   //Salary of employee by month end
 		   int employeeNumber;  //Number assinged to each employee -- to be set by constructor
 
-public: Employee();
-		Employee(string, int);
-		~Employee();
+public: 
+	    static int numberOfEmployees;  //Only one copy available to keep track of number of employees--Better to make public
+		                               //since we didn't make an accessor function for this attribute according to specs
+	    //Employee();                    
+		//Employee(string, int);
+		//~Employee();
 
 		//Pure Virtual Functions for Abstract Class
 	    virtual string name() = 0;
