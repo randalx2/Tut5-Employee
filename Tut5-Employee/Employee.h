@@ -1,3 +1,9 @@
+/*Praneel Misthry
+202515355
+Computer Methods 3
+Tut5-Employee
+18 March 2016****************************************************************************************/
+
 #pragma once
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
@@ -15,9 +21,9 @@ protected:
 public: 
 	    static int numberOfEmployees;  //Only one copy available to keep track of number of employees--Better to make public
 		                               //since we didn't make an accessor function for this attribute according to specs
-	    //Employee();                    
+	    Employee();                    
 		//Employee(string, int);
-		//~Employee();
+		~Employee();
 
 		//Pure Virtual Functions for Abstract Class
 	    virtual string name() = 0;

@@ -1,3 +1,9 @@
+/*Praneel Misthry
+202515355
+Computer Methods 3
+Tut5-Employee
+18 March 2016****************************************************************************************/
+
 #include <iostream>
 #include <string>
 #include <cstdio>
@@ -15,16 +21,13 @@ int Employee::numberOfEmployees = 0;   //DON'T SPECIFY THE STATIC KEYWORD HERE
                                      //initialized once.
                                    //Can access static variable of class scope outside class without creating any object
 
-/*
+
 Employee::Employee(){
-	
-	nameOfEmployee = "Any Employee";
-	employeeNumber = 0;
-	numberOfEmployees++;   //Whenever a new object is created a new employee is created
-	salaryOfEmployee = 0.00;
+	//For this eg its best to keep abstract class constructor blank
+	//As the sub class constructors are meant to override it
 }
 
-Employee::Employee(string iname, int inumber){
+/*Employee::Employee(string iname, int inumber){
 
 	nameOfEmployee = iname;
 	if (inumber >= 0)
@@ -38,11 +41,12 @@ Employee::Employee(string iname, int inumber){
 	}
 	numberOfEmployees++;
 	salaryOfEmployee = 0.00;
-}
+}*/                                //Don't use overloading constructor of abstract class --> messes up employee count
 
 Employee::~Employee(){
 	numberOfEmployees--; //Employee lost when an object is destroyed
-} */
+	                     //Can't keep this blank as a loss of ANY employee is counted
+} 
 
 //No Need to develop bodies for pure virtual functions in abstract base class
 //Instead define their overriding functions in the sub classes
