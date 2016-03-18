@@ -49,7 +49,7 @@ int main()
 	c1->setRevenue(16000.80);
 
 	//Fill out array with sub class objects
-	empPtr[0] = s1;
+	empPtr[0] = s1; //Since both were created using DMA and pointers no need to pass sub class by reference & sign
 	empPtr[1] = h1;
 	empPtr[2] = c1;
 
