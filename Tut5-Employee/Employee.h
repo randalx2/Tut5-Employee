@@ -6,12 +6,13 @@
 using namespace std;
 
 class Employee {
-protected: static int numberOfEmployees;  //Only one copy available to keep track of employee number
-		   string nameOfEmployee;
+protected: static int numberOfEmployees;  //Only one copy available to keep track of number of employees
+		   string nameOfEmployee;  //Employee name -- to be set by constructor
 		   int salary;
+		   int employeeNumber;  //Number assinged to each employee -- to be set by constructor
 
 public: Employee();
-		Employee(string, int, int);
+		Employee(string, int);
 
 	    virtual string name() = 0;
 		virtual int staffNumber() = 0;
@@ -22,7 +23,7 @@ class SalaryEmployee : public Employee{
 private: float monthlySalary;
 public:
 	SalaryEmployee();
-	SalaryEmployee(string, int, int);
+	SalaryEmployee(string, int);
 	~SalaryEmployee();
 
 	//Methods for this subclass
@@ -39,7 +40,7 @@ private: float hourlySalary;
 		 int hoursWorked;
 
 public: HourlyEmployee();
-		HourlyEmployee(string, int, int);
+		HourlyEmployee(string, int);
 		~HourlyEmployee();
 
 		//Methods for this sub class
@@ -58,7 +59,7 @@ private: float baseSalary;
 		 float revGenerated;
 
 public: CommissionEmployee();
-		CommissionEmployee(string, int, int);
+		CommissionEmployee(string, int);
 		~CommissionEmployee();
 
 		//Methods for this sub class
