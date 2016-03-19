@@ -25,6 +25,8 @@ int Employee::numberOfEmployees = 0;   //DON'T SPECIFY THE STATIC KEYWORD HERE
 Employee::Employee(){
 	//For this eg its best to keep abstract class constructor blank
 	//As the sub class constructors are meant to override it
+	//Incrementing the numberofEmployees static variable was doubling here since this
+	//was called as well besides the overriding constructors of the sub classes
 }
 
 /*Employee::Employee(string iname, int inumber){
@@ -191,13 +193,13 @@ float CommissionEmployee::setBaseSalary(float ibase)
 
 float CommissionEmployee::setRate(float irate)
 {
-	commRate = irate;
+	commRate = irate; //NB Send a decimal percentage value
 	return commRate;
 }
 
 float CommissionEmployee::setRevenue(float irev)
 {
-	revGenerated = irev;   //NB Send a decimal percentage value
+	revGenerated = irev;   
 	return revGenerated;
 }
 
